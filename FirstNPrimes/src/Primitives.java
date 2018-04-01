@@ -78,7 +78,6 @@ public class Primitives {
 
         Integer m = 6;
         Integer z = new Integer(7);
-        n = z;
         z = m;
 
         Long lll = 6L;
