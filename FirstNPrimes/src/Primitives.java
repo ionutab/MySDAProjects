@@ -94,24 +94,5 @@ public class Primitives {
 //
 //        String s4 = (String)34345;
 
-
-        int n = 5;
-        int i = 0;
-        while (i < n) {
-            testPrime(i);
-
-            i++;
-        }
-
-        int m = 20;
-
-        for(int i = n; i < m; i++){
-
-            testPrime(i);
-        }
-
-
-
-
     }
 }
