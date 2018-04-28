@@ -1,3 +1,5 @@
+package sda.exercse;
+
 import java.util.Scanner;
 
 public class Main {
