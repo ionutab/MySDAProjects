@@ -150,27 +150,27 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         String shapeName = scanner.nextLine();
 
-        Shape newShape;
+        Shape newShape = null;
 
         switch (shapeName) {
             case "rectangle":
-                Rectangle rectangle = new Rectangle(5.00, 8.00);
-                bucket.addShape(rectangle);
+                newShape = new Rectangle(5.00, 8.00);
                 break;
             case "square":
-                Square square = new Square( 8.00);
-                bucket.addShape(square);
+                newShape = new Square( 8.00);
                 break;
             case "triangle":
-                Triangle triangle = new Triangle(5.00, 8.00, 12.00);
-                bucket.addShape(triangle);
+                newShape = new Triangle(5.00, 8.00, 12.00);
                 break;
             case "circle":
-                Circle circle = new Circle(12.00);
-                bucket.addShape(circle);
+                newShape = new Circle(12.00);
                 break;
             default:
                 break;
+        }
+
+        if(null != newShape ){
+            bucket.addShape(newShape);
         }
     }
 
