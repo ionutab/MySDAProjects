@@ -1,6 +1,6 @@
 package store.products;
 
-public class Tshirt extends BasicProduct implements SizedProduct {
+public class Tshirt extends StockProduct implements SizedProduct {
 
 //    public int stock = 0;
 

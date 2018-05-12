@@ -6,8 +6,8 @@ public interface Product {
     public double getPrice();
     public String getName();
 
-//    public int getStock();
-//    public void setStock(int stock);
+    public int getStock();
+    public void setStock(int stock);
 
 
 }

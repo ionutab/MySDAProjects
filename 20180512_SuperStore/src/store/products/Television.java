@@ -1,6 +1,6 @@
 package store.products;
 
-public class Television extends BasicProduct implements ElectricProduct {
+public class Television extends StockProduct implements ElectricProduct {
 
     //public int stock = 0;
     //double price;

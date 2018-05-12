@@ -1,6 +1,6 @@
 package store.products;
 
-public class ElectricTShirt extends BasicProduct implements SizedProduct, ElectricProduct {
+public class ElectricTShirt extends StockProduct implements SizedProduct, ElectricProduct {
 
     int warranty;
     char size;
