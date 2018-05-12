@@ -5,6 +5,7 @@ import store.products.Product;
 public class Store {
 
     int nrOfProducts = 0;
+
     Product[] products;
 
     public Store(int capacity) {
@@ -44,15 +45,29 @@ public class Store {
     }
 
     public void addStock(String productName, int stock){
-
+        Product product = getItemByName(productName);
+        if(product != null){
+            product.setStock(product.getStock() + stock);
+        }
     }
 
     public void sellItem(String productName){
-
+        sellItem(productName, 1);
     }
 
     public void sellItem(String productName, int amout){
+        Product product = getItemByName(productName);
+        product.setStock(product.getStock() - amout);
+    }
 
+    public Product getItemByName(String productName){
+        for(int i = 0; i < nrOfProducts; i++){
+            Product product = products[i];
+            if(product.getName() == productName){
+                return product;
+            }
+        }
+        return null;
     }
 
 }

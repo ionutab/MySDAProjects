@@ -31,14 +31,16 @@ public class Tshirt extends StockProduct implements SizedProduct {
 //    @Override
 //    public void setStock(int stock) {
 //        this.stock = stock;
-//    }
 
     @Override
     public String toString() {
         return "Tshirt{" +
+                "stock=" + stock +
                 ", size=" + size +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
+
+//    }
 }

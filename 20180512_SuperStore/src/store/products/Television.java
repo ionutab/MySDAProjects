@@ -38,8 +38,11 @@ public class Television extends StockProduct implements ElectricProduct {
     @Override
     public String toString() {
         return "Television{" +
+                "stock=" + stock +
                 ", warranty=" + warranty +
                 ", diag=" + diag +
+                ", name='" + name + '\'' +
+                ", price=" + price +
                 '}';
     }
 }
