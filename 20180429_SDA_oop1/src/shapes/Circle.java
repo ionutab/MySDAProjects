@@ -1,6 +1,6 @@
 package shapes;
 
-public class Circle extends Shape {
+public class Circle implements Shape {
 
     public static Double PI = 3.14;
 

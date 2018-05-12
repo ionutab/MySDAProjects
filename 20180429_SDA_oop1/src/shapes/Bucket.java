@@ -1,8 +1,8 @@
 package shapes;
 
 /*
-* Some kind of basic bucket for abstract objects
-* */
+ * Some kind of basic bucket for abstract objects
+ * */
 public class Bucket {
 
     //numarul curent de obiecte
@@ -15,14 +15,14 @@ public class Bucket {
         shapes = new Shape[bucketSize];
     }
 
-    public void displayShapes(){
+    public void displayShapes() {
 
-        System.out.println("buclet has " + nrOfShapes + " items");
+        System.out.println("buclet has " + nrOfShapes + " shapes");
 
-        for(int i = 0; i < nrOfShapes; i++){
+        for (int i = 0; i < nrOfShapes; i++) {
 
             Shape shape = shapes[i];
-            if(shape != null){
+            if (shape != null) {
                 System.out.println(shape);
                 System.out.println(shape.calculateArea());
                 System.out.println(shape.calculatePerimeter());
@@ -31,9 +31,9 @@ public class Bucket {
         }
     }
 
-    public void addShape(Shape shape){
+    public void addShape(Shape shape) {
 
-        if(nrOfShapes >= shapes.length){
+        if (nrOfShapes >= shapes.length) {
             System.out.println("Bucket is full. Please empty.");
             return;
         }
@@ -42,7 +42,7 @@ public class Bucket {
         nrOfShapes++;
     }
 
-    public void resetBucket(int bucketSize){
+    public void resetBucket(int bucketSize) {
         shapes = new Shape[bucketSize];
         nrOfShapes = 0;
     }

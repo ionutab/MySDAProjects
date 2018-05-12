@@ -8,16 +8,12 @@ public class Menu {
     private Bucket bucket;
 
     public void displayMenu() {
-        displayMenu(new int[0]);
-    }
-
-    private void displayMenu(int[] array) {
         int option = -1;
         displayOptions();
         option = readOption();
-        int[] newArray = processOption(option, array);
+        processOption(option);
         if (option != EXIT_OPTION) {
-            displayMenu(newArray);
+            displayMenu();
         }
     }
 
@@ -52,6 +48,7 @@ public class Menu {
         System.out.println(rectangle);
         System.out.println("Rectangle Area: " + rectangle.calculateArea());
         System.out.println("Rectangle Perimeter: " + rectangle.calculatePerimeter());
+        bucket.addShape(rectangle);
     }
 
     private void createSquare() {
@@ -62,6 +59,7 @@ public class Menu {
         System.out.println(square);
         System.out.println("Square Area: " + square.calculateArea());
         System.out.println("Square Perimeter: " + square.calculatePerimeter());
+        bucket.addShape(square);
     }
 
     private void createCircle() {
@@ -74,6 +72,7 @@ public class Menu {
         System.out.println("Circle Area: " + circle.calculateArea());
         System.out.println("Circle Perimeter: " + circle.calculatePerimeter());
 //        System.out.println(Circle.PI);
+        bucket.addShape(circle);
     }
 
     public void createTriangle() {
@@ -87,6 +86,7 @@ public class Menu {
         System.out.println(triangle);
         System.out.println("Triangle Area: " + triangle.calculateArea());
         System.out.println("Triangle Perimeter: " + triangle.calculatePerimeter());
+        bucket.addShape(triangle);
     }
 
     private void testCasts() {
@@ -139,7 +139,7 @@ public class Menu {
     }
 
     private void displayBucket() {
-        if(this.bucket != null){
+        if (this.bucket != null) {
             this.bucket.displayShapes();
         } else {
             System.out.println("Bucket not created");
@@ -154,22 +154,22 @@ public class Menu {
 
         switch (shapeName) {
             case "rectangle":
-                newShape = new Rectangle(5.00, 8.00);
+                createRectangle();
                 break;
             case "square":
-                newShape = new Square( 8.00);
+                createSquare();
                 break;
             case "triangle":
-                newShape = new Triangle(5.00, 8.00, 12.00);
+                createTriangle();
                 break;
             case "circle":
-                newShape = new Circle(12.00);
+                createCircle();
                 break;
             default:
                 break;
         }
 
-        if(null != newShape ){
+        if (null != newShape) {
             bucket.addShape(newShape);
         }
     }
@@ -178,7 +178,7 @@ public class Menu {
         this.createBucket();
     }
 
-    private int[] processOption(int option, int[] array) {
+    private void processOption(int option) {
         switch (option) {
             case 1:
                 createRectangle();
@@ -210,6 +210,5 @@ public class Menu {
             case 0:
             default:
         }
-        return array;
     }
 }
