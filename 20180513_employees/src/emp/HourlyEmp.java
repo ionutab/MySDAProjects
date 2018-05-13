@@ -9,6 +9,12 @@ public class HourlyEmp extends Employee implements IHourlyEmp {
         super(name);
     }
 
+    public HourlyEmp(String name,int hours,double rate){
+        super(name);
+        this.hours=hours;
+        this.rate=rate;
+    }
+
     @Override
     public int getHours() {
         return hours;
@@ -26,4 +32,10 @@ public class HourlyEmp extends Employee implements IHourlyEmp {
     public void setRate(double rate) {
         this.rate = rate;
     }
+
+    public double getPayAmount(){
+//        System.out.println("HE Pay amount: " + getHours()*getRate());
+        return getHours()*getRate();
+    }
+
 }

@@ -2,7 +2,7 @@ package emp;
 
 import java.util.Date;
 
-public class Employee extends Person {
+public abstract class Employee extends Person implements IPayable{
 
     Date hireDate;
 
@@ -12,6 +12,16 @@ public class Employee extends Person {
 
     public void sayName(){
         System.out.println("Employee name: " + name);
+    }
+
+    public abstract double getPayAmount();
+
+    public Date getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(Date hireDate) {
+        this.hireDate = hireDate;
     }
 
 }

@@ -1,6 +1,6 @@
 package emp;
 
-public interface ISalariedEmp {
+public interface ISalariedEmp extends IPayable{
 
     double getSalary();
 

@@ -24,4 +24,20 @@ public class Department {
             employee.sayName();
         }
     }
+
+    public Employee[] getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Employee[] employees) {
+        this.employees = employees;
+    }
+
+    public int getCurrentNoEmp() {
+        return currentNoEmp;
+    }
+
+    public void setCurrentNoEmp(int currentNoEmp) {
+        this.currentNoEmp = currentNoEmp;
+    }
 }

@@ -1,6 +1,6 @@
 package emp;
 
-public interface IHourlyEmp {
+public interface IHourlyEmp extends IPayable {
 
     double getRate();
     int getHours();
