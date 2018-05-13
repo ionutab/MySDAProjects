@@ -16,5 +16,7 @@ public class Main {
         department.showEmp();
 //        salariedAcc.pay(department.getEmployees(),department.getCurrentNoEmp());
         salariedAcc.pay(department.getEmployees(),department.getCurrentNoEmp());
+
+        department.showEmpsHireDates();
     }
 }

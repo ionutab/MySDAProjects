@@ -40,4 +40,18 @@ public class Department {
     public void setCurrentNoEmp(int currentNoEmp) {
         this.currentNoEmp = currentNoEmp;
     }
+
+    public void showEmpsHireDates(){
+
+        for(int i = 0; i < currentNoEmp; i++){
+            System.out.println("Employee + " +
+                    employees[i].getName() +
+                    " hired on " +
+                    EmpUtils.format(employees[i].getHireDate())
+            );
+
+        }
+
+    }
+
 }
