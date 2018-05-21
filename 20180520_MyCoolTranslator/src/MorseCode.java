@@ -3,9 +3,10 @@ import java.util.Map;
 
 public class MorseCode {
 
-    public static Map<String, String> MORSE_CODE = new HashMap<String, String>();
+    public static final Map<String, String> MORSE_CODE = new HashMap<String, String>();
 
-    public MorseCode() {
+    static {
+        System.out.println("initializing morse code alphabet");
 
         MORSE_CODE.put("a", ".-");
         MORSE_CODE.put("b", "-...");
@@ -44,6 +45,4 @@ public class MorseCode {
         MORSE_CODE.put("9", "----.");
         MORSE_CODE.put("0", "-----");
     }
-
-
 }
